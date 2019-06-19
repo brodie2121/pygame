@@ -8,8 +8,8 @@ def main():
     pygame.init()
     screen = pygame.display.set_mode((width, height))
     pygame.display.set_caption('My Game')
-    clock = pygame.time.Clock()
-
+    
+    background_image = pygame.load('images/background.png').convert-alpha)
     # Game initialization
 
     stop_game = False
@@ -26,12 +26,11 @@ def main():
 
         # Draw background
         screen.fill(blue_color)
-
+        screen.blit(background_image, [0,0])
         # Game display
 
         pygame.display.update()
-        clock.tick(60)
-
+        
     pygame.quit()
 
 if __name__ == '__main__':
